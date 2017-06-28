@@ -1,44 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: #151515 url(../images/bkg.png) 0 0;
-    color: #eaeaea;
-    font-size: 16px;
-    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-}
-
-header {
-    background: rgba(0, 0, 0, 0.1);
-    width: 100%;
-    border-bottom: 1px dashed #b5e853;
-    padding: 20px 0;
-    margin: 0 0 40px 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-header h1 {
-    font-size: 30px;
-    line-height: 1.5;
-    margin: 0;
-    font-weight: bold;
-    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-    color: #b5e853;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
-    letter-spacing: -1px;
-    text-align: center;
-    -webkit-font-smoothing: antialiased;
-}
-
-section {
-    display: block;
-    margin: 0 0 20px 0;
-}
-
 #downloads {
     text-align: center;
 }
@@ -47,6 +6,43 @@ section {
     display: inline-block;
     text-align: center;
     margin: 0;
+}
+
+#main_content {
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+#main_content h2 {
+    font-size: 24px;
+}
+
+a {
+    color: #63c0f5;
+    text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.align-icons {
+    display: flex;
+    margin-left: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #151515;
+    color: #eaeaea;
+    font-size: 16px;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
 .btn {
@@ -66,31 +62,17 @@ section {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-a {
-    color: #63c0f5;
-    text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
-}
-
-.btn-github .icon {
-    opacity: 0.6;
-    background: url(../images/blacktocat.png) 0 0 no-repeat;
-}
-
 .btn .icon {
     display: inline-block;
     width: 16px;
     height: 16px;
     margin: 1px 8px 0 0;
-    float: left;
 }
 
-#main_content {
-    width: 100%;
-    -webkit-font-smoothing: antialiased;
-}
-
-#main_content h2 {
-    font-size: 24px;
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,30 +87,31 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 20px;
 }
 
-.highlight, .highlight .w {
-    color: #d0d0d0;
+header {
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-bottom: 1px dashed #b5e853;
+    padding: 20px 0;
+    margin: 0 0 40px 0;
 }
 
-pre {
-    background: rgba(0, 0, 0, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 10px;
-    font-size: 16px;
+header h1 {
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: bold;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
     color: #b5e853;
-    border-radius: 2px;
-    text-wrap: normal;
-    overflow: auto;
-    overflow-y: hidden;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
+    letter-spacing: -1px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
 }
 
-.highlight .gh {
+.highlight .content {
     color: #6a9fb5;
     font-weight: bold;
     margin-top: -20px;
-}
-
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-    color: #90a959;
 }
 
 .photo {
@@ -141,16 +124,18 @@ pre {
     height: 30%;
 }
 
-.align-center {
-    text-align: center;
+pre {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    font-size: 16px;
+    color: #b5e853;
+    border-radius: 2px;
+    overflow: auto;
+    overflow-y: hidden;
 }
 
-.align-nav {
-    display: flex;
-    justify-content: center;
-}
-
-.align-icons {
-    display: flex;
-    margin-left: 10px;
+section {
+    display: block;
+    margin: 0 0 20px 0;
 }
