@@ -4,7 +4,6 @@ body {
     background: #151515 url(../images/bkg.png) 0 0;
     color: #eaeaea;
     font-size: 16px;
-    line-height: 1.5;
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
@@ -125,8 +124,33 @@ pre {
 .highlight .gh {
     color: #6a9fb5;
     font-weight: bold;
+    margin-top: -20px;
 }
 
 .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
     color: #90a959;
+}
+
+.photo {
+    border-radius: 50%;
+    border: 1px dashed #b5e853;    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20%;
+    width: 25%;
+    height: 30%;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.align-icons {
+    display: flex;
+    margin-left: 10px;
 }
