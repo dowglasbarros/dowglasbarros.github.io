@@ -1,8 +1,26 @@
-#downloads {
+@keyframes animation-box {
+    from {
+        top: -10%;
+        /*margin-top: -10px;*/
+        opacity: 0
+    }
+    to {
+        top: 0;
+        /*margin-top: 0;*/
+        opacity: 1
+    }
+}
+
+#header-animation {
+    animation-name: animation-box;
+    animation: animation-box 2s forwards;
+}
+
+#header {
     text-align: center;
 }
 
-#downloads .btn {
+#header .btn {
     display: inline-block;
     text-align: center;
     margin: 0;
