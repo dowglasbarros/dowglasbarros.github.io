@@ -44,6 +44,7 @@ canvas {
 #header .btn {
     display: inline-block;
     text-align: center;
+    background-color: #444;
     margin: 0;
 }
 
@@ -62,7 +63,7 @@ header {
 
 /* -- Conteúdo da página -- */
 
-#main_content {
+#main-content {
     width: 100%;
     -webkit-font-smoothing: antialiased;
 }
@@ -75,6 +76,8 @@ a {
 .align-nav {
     display: flex;
     justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .align-icons {
@@ -106,16 +109,16 @@ a {
     margin: 1px 8px 0 0;
 }
 
-.container {
+.main.container {
     width: 90%;
-    max-width: 600px;
+    max-width: 630px;
     margin: 0 auto;
 }
 
 .highlight .content {
     color: #6a9fb5;
     font-weight: bold;
-    margin-top: -20px;
+    margin-top: -35px;
 }
 
 .photo {
@@ -141,13 +144,20 @@ pre {
 
 section {
     display: block;
-    margin: 0 0 20px 0;
+    margin: 10px 0 20px 0;
+}
+
+/* -- Rodapé -- */
+
+footer {
+    position: relative;
 }
 
 /* ===================== Tipografia ===================== */
 
-#main_content h2 {
+#main-content h2 {
     font-size: 24px;
+    margin: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {

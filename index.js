@@ -1,5 +1,5 @@
 window.onload = function() {
-    var c = document.getElementById("binaryCode");
+    var c = document.getElementById("binary-code");
         c.width = window.innerWidth;
         c.height = window.innerHeight;
 
