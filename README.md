@@ -6,7 +6,7 @@
 
 ### Acesse pelo link abaixo:
 
-#### :space_invader: [dowglasbarros.github.io](https://dowglasbarros.github.io/) :space_invader:
+#### :space_invader: [dowglasbarros.com](https://dowglasbarros.github.io/) :space_invader:
 
 ### Demo
 
