@@ -63,4 +63,44 @@ window.onload = function () {
     window.addEventListener("resize", updateProjectArrows);
     updateProjectArrows();
   }
+
+  const projectPreviewDialog = document.querySelector(".project-preview-dialog");
+  const projectPreviewImage = document.querySelector(".project-preview-image");
+  const projectPreviewClose = document.querySelector(".project-preview-close");
+
+  if (projectPreviewDialog && projectPreviewImage && projectPreviewClose) {
+    document.querySelectorAll(".project-preview-button").forEach(function (button) {
+      button.addEventListener("pointermove", function (event) {
+        if (event.pointerType === "touch") return;
+
+        const bounds = button.getBoundingClientRect();
+        const zoomX = Math.max(0, Math.min(100, ((event.clientX - bounds.left) / bounds.width) * 100));
+        const zoomY = Math.max(0, Math.min(100, ((event.clientY - bounds.top) / bounds.height) * 100));
+        button.style.setProperty("--zoom-x", zoomX + "%");
+        button.style.setProperty("--zoom-y", zoomY + "%");
+      });
+
+      button.addEventListener("pointerleave", function () {
+        button.style.removeProperty("--zoom-x");
+        button.style.removeProperty("--zoom-y");
+      });
+
+      button.addEventListener("click", function () {
+        const preview = button.querySelector("img");
+        projectPreviewImage.src = preview.src;
+        projectPreviewImage.alt = preview.alt;
+        projectPreviewDialog.showModal();
+      });
+    });
+
+    projectPreviewClose.addEventListener("click", function () {
+      projectPreviewDialog.close();
+    });
+
+    projectPreviewDialog.addEventListener("click", function (event) {
+      if (event.target === projectPreviewDialog) {
+        projectPreviewDialog.close();
+      }
+    });
+  }
 };

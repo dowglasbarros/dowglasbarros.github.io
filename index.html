@@ -82,21 +82,30 @@
             <i class="fa fa-chevron-left" aria-hidden="true"></i>
           </button>
           <div class="project-carousel" aria-label="Project list" tabindex="0">
-            <a class="project-card" href="/frescobol-timer">
-              <img src="images/frescobol-timer-preview.png" alt="Frescobol Timer preview">
-              <span class="project-card-title">Frescobol Timer</span>
+            <article class="project-card">
+              <button class="project-preview-button" type="button" aria-label="Enlarge Frescobol Timer preview">
+                <img src="images/frescobol-timer-preview.png" alt="Frescobol Timer preview">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </button>
+              <a class="project-card-title" href="/frescobol-timer">Frescobol Timer</a>
               <p class="project-card-description">A fast-paced web app for counting frescobol match scores right on the beach. Developed as an MVP in just one day for instant validation, the project evolved through real user feedback, adding usability enhancements and immersive sound effects.</p>
-            </a>
-            <a class="project-card" href="/wave-rank">
-              <img src="images/wave-rank-preview.png" alt="Wave Rank preview">
-              <span class="project-card-title">Wave Rank</span>
+            </article>
+            <article class="project-card">
+              <button class="project-preview-button" type="button" aria-label="Enlarge Wave Rank preview">
+                <img src="images/wave-rank-preview.png" alt="Wave Rank preview">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </button>
+              <a class="project-card-title" href="/wave-rank">Wave Rank</a>
               <p class="project-card-description">A web application designed to track and compute surf competition heat scores in real time. Built with a focus on speed and clear visual hierarchy for fast-paced beach environments, the app allows judges and surfers to seamlessly track wave scores, priority, and total heat standings.</p>
-            </a>
-            <a class="project-card" href="/jogo-da-velha">
-              <img src="images/jogo-da-velha-preview.png" alt="Jogo da Velha preview">
-              <span class="project-card-title">Jogo da Velha</span>
+            </article>
+            <article class="project-card">
+              <button class="project-preview-button" type="button" aria-label="Enlarge Jogo da Velha preview">
+                <img src="images/jogo-da-velha-preview.png" alt="Jogo da Velha preview">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </button>
+              <a class="project-card-title" href="/jogo-da-velha">Jogo da Velha</a>
               <p class="project-card-description">A lightweight, local two-player web game built as a hands-on study of core front-end fundamentals. Focuses on a responsive layout for quick, interactive matches.</p>
-            </a>
+            </article>
           </div>
           <button class="project-arrow" type="button" aria-label="Next projects" data-direction="1">
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
@@ -104,6 +113,13 @@
         </div>
       </section>
     </div>
+
+    <dialog class="project-preview-dialog" aria-label="Project image preview">
+      <button class="project-preview-close" type="button" aria-label="Close image preview">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+      <img class="project-preview-image" src="" alt="">
+    </dialog>
 
     <div class="container">
       <div class="row">
