@@ -31,4 +31,36 @@ window.onload = function () {
   }
 
   setInterval(draw, 40);
+
+  const projectCarousel = document.querySelector(".project-carousel");
+  const projectArrows = document.querySelectorAll(".project-arrow");
+
+  if (projectCarousel && projectArrows.length) {
+    const updateProjectArrows = function () {
+      const maxScroll = projectCarousel.scrollWidth - projectCarousel.clientWidth;
+      projectArrows.forEach(function (arrow) {
+        arrow.disabled = arrow.dataset.direction === "-1"
+          ? projectCarousel.scrollLeft <= 1
+          : projectCarousel.scrollLeft >= maxScroll - 1;
+      });
+    };
+
+    projectArrows.forEach(function (arrow) {
+      arrow.addEventListener("click", function () {
+        const card = projectCarousel.querySelector(".project-card");
+        if (!card) return;
+
+        const styles = window.getComputedStyle(projectCarousel);
+        const gap = parseFloat(styles.columnGap) || 0;
+        projectCarousel.scrollBy({
+          left: (card.getBoundingClientRect().width + gap) * Number(arrow.dataset.direction),
+          behavior: "smooth"
+        });
+      });
+    });
+
+    projectCarousel.addEventListener("scroll", updateProjectArrows);
+    window.addEventListener("resize", updateProjectArrows);
+    updateProjectArrows();
+  }
 };
